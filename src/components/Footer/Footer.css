@@ -1,0 +1,17 @@
+nav a {
+  @apply hover:text-slate-900 dark:hover:text-slate-300;
+}
+
+.bg-footer {
+  background-color: #f1f6fa;
+}
+
+.dark .bg-footer {
+  background-color: rgb(26, 19, 41);
+}
+
+.footer-content-title {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
