@@ -24,8 +24,8 @@ dist-ssr
 *.sw?
 
 src/assets
-public/cubism
 public/rw
+rw
 
 node_modules
 dist
