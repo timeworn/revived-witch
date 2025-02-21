@@ -1,29 +1,24 @@
-const siteUrls = {
+const rwUrls = {
   home: {
-    name: "Home",
-    url: "/",
-  },
-  blog: {
-    name: "Blog",
-    url: "/blog",
-    hidden: true,
+    name: "Revived Witch",
+    url: "/rw/",
   },
   characters: {
     name: "Dolls",
-    url: "/dolls",
+    url: "/rw/dolls",
   },
   game: {
     name: "Game",
     url: {
-      accountLevel: { name: "Account Level", url: "/game/account-level" },
-      achievements: { name: "Achievements", url: "/game/achievements" },
-      dailyMission: { name: "Daily Mission", url: "/game/daily" },
-      equipment: { name: "Equipment", url: "/game/equipment" },
+      accountLevel: { name: "Account Level", url: "/rw/game/account-level" },
+      achievements: { name: "Achievements", url: "/rw/game/achievements" },
+      dailyMission: { name: "Daily Mission", url: "/rw/game/daily" },
+      equipment: { name: "Equipment", url: "/rw/game/equipment" },
       uniqueEquipment: {
         name: "Unique Equipment",
-        url: "/game/unique-equipment",
+        url: "/rw/game/unique-equipment",
       },
-      gifts: { name: "Gifts", url: "/game/gifts" },
+      gifts: { name: "Gifts", url: "/rw/game/gifts" },
     },
   },
   courtYard: {
@@ -31,30 +26,34 @@ const siteUrls = {
     url: {
       alchemyLab: {
         name: "Alchemy Lab",
-        url: "/courtyard/alchemy-lab",
+        url: "/rw/courtyard/alchemy-lab",
       },
       fluorescentVilla: {
         name: "Fluorescent Villa",
-        url: "/courtyard/fluorescent-villa",
+        url: "/rw/courtyard/fluorescent-villa",
       },
-      furniture: { name: "Furniture", url: "/courtyard/furniture" },
-      musicBox: { name: "Music Box", url: "/courtyard/music-box" },
+      furniture: { name: "Furniture", url: "/rw/courtyard/furniture" },
+      musicBox: { name: "Music Box", url: "/rw/courtyard/music-box" },
     },
   },
   gallery: {
     name: "Gallery",
     url: {
-      avatar: { name: "Avatars", url: "/gallery/avatars" },
-      avatarFrames: { name: "Avatar Frames", url: "/gallery/frames" },
-      stickers: { name: "Stickers", url: "/gallery/stickers" },
+      avatar: { name: "Avatars", url: "/rw/gallery/avatars" },
+      avatarFrames: { name: "Avatar Frames", url: "/rw/gallery/frames" },
+      stickers: { name: "Stickers", url: "/rw/gallery/stickers" },
     },
   },
 };
 
+const siteUrls = {
+  rw: rwUrls,
+};
+
 const siteData = {
-  siteName: "Revived Witch Database",
-  siteDesc: "A database for Revived Witch",
-  siteUrl: "https://rw.timeworn.net",
+  siteName: "Timeworn Wiki",
+  siteDesc: "A database for various games.",
+  siteUrl: "https://wiki.timeworn.net",
   siteUrls: siteUrls,
   socials: {
     github: "https://github.com/timeworn/",

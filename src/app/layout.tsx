@@ -4,7 +4,8 @@ import Navbar from "../components/Navbar/Navbar";
 import "./layout.css";
 import { ReactNode } from "react";
 import siteData from "../data/siteData";
-import Providers from "./_components/providers";
+import Providers from "./_components/Providers";
+import { ThemeProvider } from "next-themes";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteData.siteUrl),
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
     "Wiki",
   ],
   icons: {
-    icon: "/icon.png",
+    icon: "/icon.webp",
   },
   openGraph: {
     url: "./",
@@ -41,15 +42,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
-      <body>
-        <div className="bg-color min-w-screen text-slate-500 antialiased dark:text-slate-400">
+    <html lang="en" suppressHydrationWarning>
+      <body className="bg-color min-w-screen text-slate-500 antialiased dark:text-slate-400">
+        <ThemeProvider attribute="class">
           <Navbar />
           <Providers>
             <div className="min-h-screen">{children}</div>
           </Providers>
           <Footer />
-        </div>
+        </ThemeProvider>
       </body>
     </html>
   );

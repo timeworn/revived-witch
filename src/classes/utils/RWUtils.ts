@@ -175,7 +175,7 @@ export namespace RWUtils {
 
     const formattedPath = modifiedAssetBundle
       .replace(/\./g, "/")
-      .replace(/\/assetbundle$/, ".png");
+      .replace(/\/assetbundle$/, ".webp");
 
     return getImageUrl(`${RW_ASSETS}/${formattedPath}`);
   };

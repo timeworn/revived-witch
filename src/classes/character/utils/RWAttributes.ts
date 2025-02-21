@@ -25,7 +25,7 @@ import cFavourGiftTypeJson from "../../../data/characters/role/cfavourgifttype.j
 import cFavourSkillJson from "../../../data/characters/role/cfavourskill.json";
 import cYardSkillJson from "../../../data/characters/courtyard/cyardskill.json";
 
-const RW_CDN = "rw/cdn/GLOBAL";
+const RW_RANKS = "rw/assets/GLOBAL/ui/imagesets/LeftSmallRank";
 const RARITY_NAMES = ["R", "SR", "SSR", "UR", "EX"];
 
 const affiliationData: {
@@ -57,9 +57,7 @@ export namespace RWCAttributes {
     const rarity: ICharacterRarity = {
       id: characterRarity ?? -1,
       icon: characterRarity
-        ? getImageUrl(
-            `${RW_CDN}/ranks/charRanks/LeftSmallRank${characterRarity - 1}.png`,
-          )
+        ? getImageUrl(`${RW_RANKS}${characterRarity - 1}.webp`)
         : undefined,
       name: characterRarity ? RARITY_NAMES[characterRarity - 1] : "?",
     };

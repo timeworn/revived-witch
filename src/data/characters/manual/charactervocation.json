@@ -1,9 +1,9 @@
 {
-  "1": "rw/assets/GLOBAL/ui/layouts/basecharacterinfo/charshouhu.png",
-  "2": "rw/assets/GLOBAL/ui/imagesets/charpohuai.png",
-  "3": "rw/assets/GLOBAL/ui/layouts/tujian/charcisha.png",
-  "4": "rw/assets/GLOBAL/ui/imagesets/charfanghai.png",
-  "5": "rw/assets/GLOBAL/ui/imagesets/charhuifu.png",
-  "6": "rw/assets/GLOBAL/ui/imagesets/charmodao.png",
-  "7": "rw/assets/GLOBAL/ui/imagesets/charmonv.png"
+  "1": "rw/assets/GLOBAL/ui/imagesets/charshouhu.webp",
+  "2": "rw/assets/GLOBAL/ui/imagesets/charpohuai.webp",
+  "3": "rw/assets/GLOBAL/ui/imagesets/charcisha.webp",
+  "4": "rw/assets/GLOBAL/ui/imagesets/charfanghai.webp",
+  "5": "rw/assets/GLOBAL/ui/imagesets/charhuifu.webp",
+  "6": "rw/assets/GLOBAL/ui/imagesets/charmodao.webp",
+  "7": "rw/assets/GLOBAL/ui/imagesets/charmonv.webp"
 }

@@ -36,7 +36,7 @@ code {
   --color-text-alt: #475569;
 }
 
-:root .dark {
+:root.dark {
   --btn-ghost-hover-bg: hsla(220, 13.4%, 69.2%, 0.2);
   --color-primary: #f87171;
   --color-svg: #f87171;
