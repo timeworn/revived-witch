@@ -1,5 +1,5 @@
 // @ts-ignore
-const baseImageUrl = "";
+const baseImageUrl = "https://cdn.timeworn.net";
 
 export const getImageUrl = (path: string | undefined): string => {
   return `${baseImageUrl}/${path}`;
