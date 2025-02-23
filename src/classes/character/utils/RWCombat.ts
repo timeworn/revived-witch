@@ -138,7 +138,7 @@ export namespace RWCCombat {
       id: passiveSkillId,
       name: RWTexts.getWordSkill(characterSkillShow.nameTextID),
       icon: getImageUrl(
-        "rw/assets/GLOBAL/ui/imagesets/CharDetailPassiveSkill0.png",
+        "rw/assets/GLOBAL/ui/imagesets/CharDetailPassiveSkill0.webp",
       ),
       description: description,
     };
