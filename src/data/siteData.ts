@@ -65,7 +65,7 @@ const siteUrls = {
 
 const siteData = {
   siteName: "Timeworn Wiki",
-  siteDesc: "A database for various games.",
+  siteDesc: "A database.",
   siteUrl: "https://wiki.timeworn.net",
   siteUrls: siteUrls,
   socials: {

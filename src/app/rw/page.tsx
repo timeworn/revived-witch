@@ -9,7 +9,7 @@ const HOME_ASSETS = "rw/home/";
 const Page: React.FC = () => {
   return (
     <section className="min-w-screen relative flex min-h-screen flex-col items-center">
-      <video
+      {/* <video
         className="absolute left-1/2 top-1/2 z-0 hidden h-full w-full -translate-x-1/2 -translate-y-1/2 object-cover brightness-50 lg:block"
         src={getImageUrl(HOME_ASSETS + "bg.mp4")}
         preload="auto"
@@ -17,9 +17,9 @@ const Page: React.FC = () => {
         loop={true}
         muted={true}
         playsInline={true}
-      />
+      /> */}
       <img
-        className="absolute left-1/2 top-1/2 z-0 h-full w-full -translate-x-1/2 -translate-y-1/2 object-cover brightness-50 lg:hidden"
+        className="absolute left-1/2 top-1/2 z-0 h-full w-full -translate-x-1/2 -translate-y-1/2 object-cover brightness-50"
         src={getImageUrl(HOME_ASSETS + "bg.webp")}
         alt="Background"
       />
