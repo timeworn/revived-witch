@@ -1,6 +1,10 @@
 import React, { memo, useCallback, useEffect, useRef, useState } from "react";
 import { RWAudio } from "../../classes/yard/music/RWAudio";
-import SvgObject from "../Base/SvgObject";
+import {
+  PlayIcon,
+  PauseIcon,
+  ArrowDownTrayIcon,
+} from "@heroicons/react/24/solid";
 
 export interface AudioObjectProps {
   audio: RWAudio;
@@ -100,8 +104,11 @@ const AudioObject: React.FC<AudioObjectProps> = memo(
             disabled={duration === 0}
           >
             <span className="z-10 flex flex-row items-center">
-              <SvgObject svgPath="rw/other/play" hidden={isPlaying} />
-              <SvgObject svgPath="rw/other/pause" hidden={!isPlaying} />
+              {isPlaying ? (
+                <PauseIcon className="svg-fill-alt" width={24} height={24} />
+              ) : (
+                <PlayIcon className="svg-fill-alt" width={24} height={24} />
+              )}
               {formatTime(currentTime)} / {formatTime(duration)}
             </span>
             <span
@@ -114,7 +121,11 @@ const AudioObject: React.FC<AudioObjectProps> = memo(
             onClick={handleDownload}
             disabled={duration === 0}
           >
-            <SvgObject svgPath="rw/other/download" />
+            <ArrowDownTrayIcon
+              className="svg-fill-alt"
+              width={24}
+              height={24}
+            />
           </button>
         </div>
         <audio ref={audioRef} src={audioUrl} />

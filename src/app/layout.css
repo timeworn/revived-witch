@@ -303,3 +303,7 @@ hr {
   content: "";
   margin-right: 2ch;
 }
+
+.sidebar-margin {
+  @apply lg:ml-[250px]
+}

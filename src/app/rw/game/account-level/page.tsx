@@ -6,7 +6,7 @@ import siteData from "../../../../data/siteData";
 const levels = RWAccountLevel.getLevels();
 
 export const metadata: Metadata = {
-  title: siteData.siteUrls.rw.game.url.accountLevel.name,
+  title: siteData.siteUrls.rw.routes.game.routes.accountLevel.name,
 };
 
 const AccountLevel: React.FC = () => (

@@ -2,13 +2,14 @@ import { Metadata, ResolvingMetadata } from "next";
 import { ReactNode } from "react";
 import { MetadataProps } from "../../interfaces/MetadataInterfaces";
 import siteData from "../../data/siteData";
+import Sidebar from "../../components/Sidebar/Sidebar";
 
 export async function generateMetadata(
   {}: MetadataProps,
   parent: ResolvingMetadata,
 ): Promise<Metadata> {
   const parentMetadata = await parent;
-  const homeSite = siteData.siteUrls.rw.home;
+  const homeSite = siteData.siteUrls.rw;
 
   return {
     title: {
@@ -19,7 +20,12 @@ export async function generateMetadata(
 }
 
 const layout: React.FC<{ children: ReactNode }> = ({ children }) => {
-  return <>{children}</>;
+  return (
+    <>
+      <Sidebar siteRoute={siteData.siteUrls.rw} />
+      <div className="sidebar-margin">{children}</div>
+    </>
+  );
 };
 
 export default layout;

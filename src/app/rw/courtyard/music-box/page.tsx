@@ -4,7 +4,7 @@ import siteData from "../../../../data/siteData";
 import MusicBox from "./_components/MusicBox";
 
 export const metadata: Metadata = {
-  title: siteData.siteUrls.rw.courtYard.url.musicBox.name,
+  title: siteData.siteUrls.rw.routes.courtYard.routes.musicBox.name,
 };
 
 const Page: React.FC = () => {

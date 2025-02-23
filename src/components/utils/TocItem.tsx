@@ -1,5 +1,4 @@
 import React from "react";
-import SvgObject from "../Base/SvgObject";
 
 interface TocItemProps {
   className?: string;
@@ -25,8 +24,6 @@ const TocItem: React.FC<TocItemProps> = ({
   >
     {children ? (
       children
-    ) : src && src.endsWith(".svg") ? (
-      <SvgObject svgPath={src} title={name} />
     ) : (
       <img className="h-full w-full" src={src} alt={name} title={name} />
     )}

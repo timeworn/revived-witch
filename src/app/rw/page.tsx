@@ -36,7 +36,7 @@ const Page: React.FC = () => {
               A Revived Witch wiki. Long live the{" "}
               <Link
                 className="text-underlined not-light"
-                href={siteData.siteUrls.rw.characters.url + "/1"}
+                href={siteData.siteUrls.rw.routes.characters.url + "/1"}
               >
                 Witch
               </Link>

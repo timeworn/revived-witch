@@ -5,7 +5,7 @@ import { lazy } from "react";
 const Gifts = lazy(() => import("./_components/Gifts"));
 
 export const metadata: Metadata = {
-  title: siteData.siteUrls.rw.game.url.dailyMission.name,
+  title: siteData.siteUrls.rw.routes.game.routes.dailyMission.name,
 };
 
 const Page: React.FC = () => <Gifts />;

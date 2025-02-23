@@ -1,11 +1,8 @@
 import React, { Children, useEffect, useRef, useState } from "react";
 import TocItem from "./TocItem";
-import SvgObject from "../Base/SvgObject";
 
 interface TocProps {
-  children:
-    | React.ReactElement<typeof TocItem>
-    | React.ReactElement<typeof TocItem>[];
+  children: React.ReactElement<typeof TocItem>[];
 }
 
 const Toc: React.FC<TocProps> = ({ children }) => {
@@ -13,6 +10,9 @@ const Toc: React.FC<TocProps> = ({ children }) => {
   const observer = useRef<IntersectionObserver | null>(null);
   const prevScrollY = useRef<number>(0);
   const activeHeadingId = useRef<string | null>(null);
+
+  const childrenArray = Children.toArray(children) as React.ReactElement[];
+  const buttonImage = childrenArray[activeIndex ?? 0]?.props.children || null;
 
   const handleClick = (index: number) => {
     setActiveIndex(index);
@@ -83,29 +83,7 @@ const Toc: React.FC<TocProps> = ({ children }) => {
         role="button"
         className="text-default h-14 w-14 rounded-box bg-slate-600 p-3 text-xl"
       >
-        <SvgObject
-          className="h-full w-full"
-          svgPath="rw/other/toc"
-          hidden={activeIndex !== null}
-        />
-        {Children.map(children, (child, index) =>
-          React.isValidElement(child) ? (
-            <div key={index} hidden={activeIndex !== index}>
-              {child.props.src?.endsWith(".svg") ? (
-                <SvgObject
-                  className="h-full w-full"
-                  svgPath={child.props.src}
-                />
-              ) : (
-                <img
-                  className="h-full w-full"
-                  src={child.props.src}
-                  alt={child.props.name}
-                />
-              )}
-            </div>
-          ) : null,
-        )}
+        {buttonImage}
       </div>
       <ul
         tabIndex={0}

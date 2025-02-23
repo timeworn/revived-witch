@@ -6,7 +6,7 @@ import siteData from "../../../../data/siteData";
 const stickers = RWStickers.getStickers();
 
 export const metadata: Metadata = {
-  title: siteData.siteUrls.rw.gallery.url.stickers.name,
+  title: siteData.siteUrls.rw.routes.gallery.routes.stickers.name,
 };
 
 const Stickers: React.FC = () => (

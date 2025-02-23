@@ -5,7 +5,7 @@ import siteData from "../../../../data/siteData";
 const Achievements = lazy(() => import("./_components/Achievements"));
 
 export const metadata: Metadata = {
-  title: siteData.siteUrls.rw.game.url.achievements.name,
+  title: siteData.siteUrls.rw.routes.game.routes.achievements.name,
 };
 
 const Page: React.FC = () => <Achievements />;

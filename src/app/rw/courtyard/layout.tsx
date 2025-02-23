@@ -8,7 +8,7 @@ export async function generateMetadata(
   parent: ResolvingMetadata,
 ): Promise<Metadata> {
   const parentMetadata = await parent;
-  const courtyardSite = siteData.siteUrls.rw.courtYard;
+  const courtyardSite = siteData.siteUrls.rw.routes.courtYard;
 
   return {
     title: {

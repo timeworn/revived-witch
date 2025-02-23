@@ -14,8 +14,8 @@ const soundEffects = new RWSoundEffects().se;
 const voicelines = new RWVoice().voice;
 
 const TABS = [
-  { name: "Music Box", music: bgMusic },
-  { name: "Background Music", music: musicBox },
+  { name: "Music Box", music: musicBox },
+  { name: "Background Music", music: bgMusic },
   { name: "Sound Effects", music: soundEffects },
   { name: "Voicelines", music: voicelines },
 ];

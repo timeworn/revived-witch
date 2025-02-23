@@ -5,7 +5,7 @@ import siteData from "../../../../data/siteData";
 const AlchemyLab = lazy(() => import("./_components/AlchemyLab"));
 
 export const metadata: Metadata = {
-  title: siteData.siteUrls.rw.courtYard.url.alchemyLab.name,
+  title: siteData.siteUrls.rw.routes.courtYard.routes.alchemyLab.name,
 };
 
 const Page: React.FC = () => {

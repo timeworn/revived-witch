@@ -1,47 +1,60 @@
+import { getImageUrl } from "../hooks/getImage";
+
+export interface SiteRoute {
+  name: string;
+  url: string;
+  icon?: string;
+  routes?: Record<string, SiteRoute>;
+}
+
 const rwUrls = {
-  home: {
-    name: "Revived Witch",
-    url: "/rw/",
-  },
-  characters: {
-    name: "Dolls",
-    url: "/rw/dolls",
-  },
-  game: {
-    name: "Game",
-    url: {
-      accountLevel: { name: "Account Level", url: "/rw/game/account-level" },
-      achievements: { name: "Achievements", url: "/rw/game/achievements" },
-      dailyMission: { name: "Daily Mission", url: "/rw/game/daily" },
-      equipment: { name: "Equipment", url: "/rw/game/equipment" },
-      uniqueEquipment: {
-        name: "Unique Equipment",
-        url: "/rw/game/unique-equipment",
-      },
-      gifts: { name: "Gifts", url: "/rw/game/gifts" },
+  name: "Revived Witch",
+  url: "/rw",
+  icon: getImageUrl("rw/home/bg.webp"),
+  routes: {
+    characters: {
+      name: "Dolls",
+      url: "/rw/dolls",
     },
-  },
-  courtYard: {
-    name: "Courtyard",
-    url: {
-      alchemyLab: {
-        name: "Alchemy Lab",
-        url: "/rw/courtyard/alchemy-lab",
+    game: {
+      name: "Game",
+      url: "/game",
+      routes: {
+        accountLevel: { name: "Account Level", url: "/rw/game/account-level" },
+        achievements: { name: "Achievements", url: "/rw/game/achievements" },
+        dailyMission: { name: "Daily Mission", url: "/rw/game/daily" },
+        equipment: { name: "Equipment", url: "/rw/game/equipment" },
+        uniqueEquipment: {
+          name: "Unique Equipment",
+          url: "/rw/game/unique-equipment",
+        },
+        gifts: { name: "Gifts", url: "/rw/game/gifts" },
       },
-      fluorescentVilla: {
-        name: "Fluorescent Villa",
-        url: "/rw/courtyard/fluorescent-villa",
-      },
-      furniture: { name: "Furniture", url: "/rw/courtyard/furniture" },
-      musicBox: { name: "Music Box", url: "/rw/courtyard/music-box" },
     },
-  },
-  gallery: {
-    name: "Gallery",
-    url: {
-      avatar: { name: "Avatars", url: "/rw/gallery/avatars" },
-      avatarFrames: { name: "Avatar Frames", url: "/rw/gallery/frames" },
-      stickers: { name: "Stickers", url: "/rw/gallery/stickers" },
+    courtYard: {
+      name: "Courtyard",
+      url: "/rw/courtyard",
+      routes: {
+        alchemyLab: {
+          name: "Alchemy Lab",
+          url: "/rw/courtyard/alchemy-lab",
+        },
+        fluorescentVilla: {
+          name: "Fluorescent Villa",
+          url: "/rw/courtyard/fluorescent-villa",
+        },
+        furniture: { name: "Furniture", url: "/rw/courtyard/furniture" },
+        musicBox: { name: "Music Box", url: "/rw/courtyard/music-box" },
+      },
+    },
+    gallery: {
+      name: "Gallery",
+      url: "/rw/gallery",
+      routes: {
+        avatar: { name: "Avatars", url: "/rw/gallery/avatars" },
+        avatarFrames: { name: "Avatar Frames", url: "/rw/gallery/frames" },
+        stickers: { name: "Stickers", url: "/rw/gallery/stickers" },
+      },
     },
   },
 };

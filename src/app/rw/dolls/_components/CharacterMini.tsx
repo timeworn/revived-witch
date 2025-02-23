@@ -16,7 +16,7 @@ const CharacterMini: React.FC<CharacterMiniProps> = memo(
       character.affiliation?.icon,
     ].filter(Boolean);
 
-    const characterUrl = `${siteData.siteUrls.rw.characters.url}/${character.id}`;
+    const characterUrl = `${siteData.siteUrls.rw.routes.characters.url}/${character.id}`;
 
     return (
       <Link
@@ -55,7 +55,7 @@ const CharacterMini: React.FC<CharacterMiniProps> = memo(
           </div>
         </div>
         <p
-          className="text-title self-center overflow-hidden text-ellipsis text-nowrap"
+          className="text-title w-full overflow-hidden text-ellipsis text-nowrap text-center"
           title={character.name}
         >
           {character.name}

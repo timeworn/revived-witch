@@ -9,7 +9,7 @@ const Item = lazy(() => import("../../../../components/utils/Item"));
 const avatars = RWAvatar.getAvatars();
 
 export const metadata: Metadata = {
-  title: siteData.siteUrls.rw.gallery.url.avatar.name,
+  title: siteData.siteUrls.rw.routes.gallery.routes.avatar.name,
 };
 
 const Avatars: React.FC = () => (

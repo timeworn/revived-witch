@@ -9,7 +9,7 @@ const Item = lazy(() => import("../../../../components/utils/Item"));
 const frames = RWAvatarFrame.getAvatarFrames();
 
 export const metadata: Metadata = {
-  title: siteData.siteUrls.rw.gallery.url.avatarFrames.name,
+  title: siteData.siteUrls.rw.routes.gallery.routes.avatarFrames.name,
 };
 
 const AvatarFrames: React.FC = () => (
