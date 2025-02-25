@@ -6,7 +6,11 @@ const NavbarItem: React.FC<{
   url: any;
   children?: React.ReactNode;
 }> = ({ name, url, children }) => (
-  <Link href={url} className="text-default btn btn-ghost text-xl">
+  <Link
+    href={url}
+    className="text-default btn btn-ghost text-xl"
+    prefetch={false}
+  >
     {name}
     {children}
   </Link>

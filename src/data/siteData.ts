@@ -3,7 +3,6 @@ import { getImageUrl } from "../hooks/getImage";
 export interface SiteRoute {
   name: string;
   url: string;
-  icon?: string;
   routes?: Record<string, SiteRoute>;
 }
 
@@ -59,8 +58,61 @@ const rwUrls = {
   },
 };
 
+const csUrls = {
+  name: "CounterSide",
+  url: "/cs",
+  icon: getImageUrl("rw/home/bg.webp"),
+  routes: {
+    characters: {
+      name: "Dolls",
+      url: "/cs/dolls",
+    },
+    game: {
+      name: "Game",
+      url: "/game",
+      routes: {
+        accountLevel: { name: "Account Level", url: "/cs/game/account-level" },
+        achievements: { name: "Achievements", url: "/cs/game/achievements" },
+        dailyMission: { name: "Daily Mission", url: "/cs/game/daily" },
+        equipment: { name: "Equipment", url: "/cs/game/equipment" },
+        uniqueEquipment: {
+          name: "Unique Equipment",
+          url: "/cs/game/unique-equipment",
+        },
+        gifts: { name: "Gifts", url: "/cs/game/gifts" },
+      },
+    },
+    courtYard: {
+      name: "Courtyard",
+      url: "/cs/courtyard",
+      routes: {
+        alchemyLab: {
+          name: "Alchemy Lab",
+          url: "/cs/courtyard/alchemy-lab",
+        },
+        fluorescentVilla: {
+          name: "Fluorescent Villa",
+          url: "/cs/courtyard/fluorescent-villa",
+        },
+        furniture: { name: "Furniture", url: "/cs/courtyard/furniture" },
+        musicBox: { name: "Music Box", url: "/cs/courtyard/music-box" },
+      },
+    },
+    gallery: {
+      name: "Gallery",
+      url: "/cs/gallery",
+      routes: {
+        avatar: { name: "Avatars", url: "/cs/gallery/avatars" },
+        avatarFrames: { name: "Avatar Frames", url: "/cs/gallery/frames" },
+        stickers: { name: "Stickers", url: "/cs/gallery/stickers" },
+      },
+    },
+  },
+};
+
 const siteUrls = {
   rw: rwUrls,
+  cs: csUrls,
 };
 
 const siteData = {

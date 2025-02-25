@@ -1,4 +1,7 @@
-import { ICAchieveLevelConfigData, ItemAmount } from "../../interfaces/CharacterInterfaces";
+import {
+  ICAchieveLevelConfigData,
+  ItemAmount,
+} from "../../interfaces/CharacterInterfaces";
 import { RWUtils } from "../utils/RWUtils";
 
 export class RWLevelReward {
@@ -11,11 +14,16 @@ export class RWLevelReward {
     this.id = levelConfig.id;
     this.level = this.id;
     this.points = levelConfig.achievePoint;
-    this.reward = RWUtils.createItemAmount(levelConfig.rewardItem, levelConfig.itemNum);
+    this.reward = RWUtils.createItemAmount(
+      levelConfig.rewardItem,
+      levelConfig.itemNum,
+    );
   }
 
   static getLevelRewards() {
-    return RWUtils.getAchieveLevelConfigData().map((levelConfig) => new RWLevelReward(levelConfig));
+    return RWUtils.getAchieveLevelConfigData().map(
+      (levelConfig) => new RWLevelReward(levelConfig),
+    );
   }
 
   getReward() {

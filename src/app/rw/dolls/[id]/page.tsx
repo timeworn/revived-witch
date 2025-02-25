@@ -1,14 +1,16 @@
-import React, { lazy } from "react";
 import { Metadata, ResolvingMetadata } from "next";
 import { RWCharacter } from "../../../../classes/character/RWCharacter";
 import { MetadataProps } from "../../../../interfaces/MetadataInterfaces";
+import dynamic from "next/dynamic";
 
-const Character = lazy(() => import("./_components/Character"));
+const Character = dynamic(() => import("./_components/Character"));
+
+export const dynamicParams = false;
 
 export const generateStaticParams = async () => {
-  const characterIds = RWCharacter.getCharacters();
+  const characters = RWCharacter.getCharacters();
 
-  return characterIds.map((character: RWCharacter) => ({
+  return characters.map((character: RWCharacter) => ({
     id: character.id.toString(),
   }));
 };

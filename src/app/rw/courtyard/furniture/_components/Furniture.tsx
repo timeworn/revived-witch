@@ -1,6 +1,6 @@
 "use client";
 
-import React, { Suspense, useState } from "react";
+import React, { useState } from "react";
 import { RWFurnitureItem } from "../../../../../classes/item/RWFurnitureItem";
 import SearchBar from "../../../../../components/Base/Searchbar";
 import Item from "../../../../../components/utils/Item";
@@ -19,13 +19,11 @@ const Furniture: React.FC = () => {
       <div className="mb-4 flex h-12 justify-center gap-3">
         <SearchBar objects={furniture} filteredObjects={setFilteredObjects} />
       </div>
-      <Suspense>
-        <PageMaster<RWFurnitureItem>
-          objects={filteredObjects}
-          renderObject={(object) => <Item item={object} />}
-          resetPageOnParam="tab"
-        />
-      </Suspense>
+      <PageMaster<RWFurnitureItem>
+        objects={filteredObjects}
+        renderObject={(object) => <Item item={object} />}
+        resetPageOnParam="tab"
+      />
     </div>
   );
 };

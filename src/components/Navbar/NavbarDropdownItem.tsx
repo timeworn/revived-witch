@@ -7,7 +7,7 @@ const NavbarDropdownItem: React.FC<{
   children?: React.ReactNode;
 }> = ({ name, url, children }) => (
   <li>
-    <Link href={url} className="btn-ghost">
+    <Link href={url} className="btn-ghost" prefetch={false}>
       {name}
       {children}
     </Link>

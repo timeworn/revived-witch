@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+
 import { RWLevelReward } from "../../../../../../classes/task/RWLevelReward";
 import Attributes from "../../../../../../components/utils/Attributes";
 import Reward from "../../../../../../components/utils/Reward";

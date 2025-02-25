@@ -1,8 +1,16 @@
-import { ICAchieveMissionConfigData, ItemAmount } from "../../interfaces/CharacterInterfaces";
+import {
+  ICAchieveMissionConfigData,
+  ItemAmount,
+} from "../../interfaces/CharacterInterfaces";
 import { RWUtils } from "../utils/RWUtils";
 import { RWTexts } from "../utils/RWTexts";
 
-const ACHIEVEMENT_TABS: readonly string[] = ["Progress", "Bond", "Growth", "Social"];
+const ACHIEVEMENT_TABS: readonly string[] = [
+  "Progress",
+  "Bond",
+  "Growth",
+  "Social",
+];
 
 export class RWAchievement {
   id: number;
@@ -26,7 +34,7 @@ export class RWAchievement {
 
   static getAchievements() {
     return Object.values(RWUtils.getAchieveMissionConfigData()).map(
-      (achievementData) => new RWAchievement(achievementData)
+      (achievementData) => new RWAchievement(achievementData),
     );
   }
 

@@ -9,7 +9,7 @@ interface GameItemProps {
 
 const GameItem: React.FC<GameItemProps> = (props) => {
   return (
-    <Link className="mb-4" href={props.href}>
+    <Link className="mb-4" href={props.href} prefetch={false}>
       <img
         className="round-gray h-full w-full object-cover"
         src={props.src}

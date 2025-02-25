@@ -42,7 +42,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="bg-color min-w-screen text-slate-500 antialiased dark:text-slate-400">
+      <body className="bg-color min-w-screen text-default-alt antialiased">
         <Providers>
           <Navbar />
           <div className="min-h-screen">{children}</div>

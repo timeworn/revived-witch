@@ -1,14 +1,21 @@
-/* eslint-disable no-undef */
-/** @type {import('tailwindcss').Config} */
-export default {
+import { Config } from "tailwindcss";
+import withMT from "@material-tailwind/react/utils/withMT";
+import colors from "tailwindcss/colors";
+
+const tailwindConfig: Config = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   darkMode: "class",
   plugins: [require("@tailwindcss/typography"), require("daisyui")],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        ...colors,
+      },
+    },
   },
   daisyui: {
     themes: [],
   },
-  ...(process.env.NODE_ENV === "production" ? { cssnano: {} } : {}),
 };
+
+export default withMT(tailwindConfig);

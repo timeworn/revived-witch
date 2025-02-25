@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://wiki.timeworn.net
+
+# Sitemaps
+Sitemap: https://wiki.timeworn.net/sitemap.xml

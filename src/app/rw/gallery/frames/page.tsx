@@ -1,10 +1,10 @@
-import React, { lazy } from "react";
 import { RWAvatarFrame } from "../../../../classes/avatar/RWAvatarFrame";
 import { RWItem } from "../../../../classes/item/RWItem";
 import { Metadata } from "next";
 import siteData from "../../../../data/siteData";
+import Item, { ItemConfig } from "../../../../components/utils/Item";
 
-const Item = lazy(() => import("../../../../components/utils/Item"));
+const CONFIG: ItemConfig = { imageSize: "large" };
 
 const frames = RWAvatarFrame.getAvatarFrames();
 
@@ -20,11 +20,7 @@ const AvatarFrames: React.FC = () => (
     <div>
       <div className="prose grid max-w-full justify-center gap-5 prose-h3:mt-0 prose-p:mb-0 sm:grid-cols-3 lg:grid-cols-4">
         {frames.map((frame, key) => (
-          <Item
-            key={key}
-            item={frame as RWItem}
-            config={{ imageSize: "large" }}
-          />
+          <Item key={key} item={frame as RWItem} config={CONFIG} />
         ))}
       </div>
     </div>

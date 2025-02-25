@@ -1,4 +1,7 @@
-import { ICLightTrainingCourseData, ItemAmount } from "../../interfaces/CharacterInterfaces";
+import {
+  ICLightTrainingCourseData,
+  ItemAmount,
+} from "../../interfaces/CharacterInterfaces";
 import { RWUtils } from "../utils/RWUtils";
 import { RWTexts } from "../utils/RWTexts";
 
@@ -16,12 +19,16 @@ export class RWLightTraining {
     this.time = courseData.trainingtime;
     this.expGain = courseData.trainingexpgain;
     this.rarity = courseData.trainingrarity;
-    this.itemNeeded = RWUtils.createItemAmount(courseData.lightcostitem, courseData.lightcostnum);
+    this.itemNeeded = RWUtils.createItemAmount(
+      courseData.lightcostitem,
+      courseData.lightcostnum,
+    );
   }
 
   static getLightTrainings() {
     return RWUtils.getLightTrainingCourseData().map(
-      (courseData: ICLightTrainingCourseData) => new RWLightTraining(courseData)
+      (courseData: ICLightTrainingCourseData) =>
+        new RWLightTraining(courseData),
     );
   }
 

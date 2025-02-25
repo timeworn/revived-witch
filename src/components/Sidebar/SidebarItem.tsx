@@ -20,6 +20,7 @@ const SidebarItem: React.FC<SidebarItemProps> = (props) => {
       <Link
         className="text-default sidebar-item items-center"
         href={props.href}
+        prefetch={false}
       >
         <button
           className="absolute inset-0 lg:hidden"

@@ -23,6 +23,7 @@ const CharacterMini: React.FC<CharacterMiniProps> = memo(
         id="character"
         className={`${className} btn-round-gray btn-anim-alt btn-anim flex flex-col p-2`}
         href={characterUrl}
+        prefetch={false}
       >
         <div className="relative h-20 w-20 self-center overflow-hidden p-[3%] transition-transform duration-300 ease-out hover:scale-105 sm:h-24 sm:w-24 lg:h-28 lg:w-28">
           <img

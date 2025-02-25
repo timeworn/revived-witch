@@ -18,7 +18,9 @@ export class RWDailyMission {
   }
 
   static getDailyMissions() {
-    return Object.values(RWUtils.getDailyMissionConfigData()).map((missionConfig) => new RWDailyMission(missionConfig));
+    return Object.values(RWUtils.getDailyMissionConfigData()).map(
+      (missionConfig) => new RWDailyMission(missionConfig),
+    );
   }
 
   getName() {

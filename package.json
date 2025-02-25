@@ -15,6 +15,7 @@
   "dependencies": {
     "@bprogress/next": "^3.0.0",
     "@heroicons/react": "^2.2.0",
+    "@material-tailwind/react": "^2.1.10",
     "@next/bundle-analyzer": "^15.1.7",
     "@pixi/react": "^7.1.2",
     "limiter": "^3.0.0",

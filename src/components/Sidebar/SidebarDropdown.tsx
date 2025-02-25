@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Sidebar.css";
 import { ChevronRightIcon } from "@heroicons/react/24/solid";
 
@@ -13,6 +13,18 @@ interface SidebarDropdownProps {
 
 const SidebarDropdown: React.FC<SidebarDropdownProps> = (props) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [height, setHeight] = useState("0px");
+  const dropdownRef = useRef<HTMLUListElement>(null);
+
+  useEffect(() => {
+    if (dropdownRef.current) {
+      if (isOpen) {
+        setHeight(`${dropdownRef.current.scrollHeight}px`);
+      } else {
+        setHeight("0px");
+      }
+    }
+  }, [isOpen, props.children]);
 
   const toggleDropdown = () => setIsOpen((prev) => !prev);
 
@@ -33,7 +45,9 @@ const SidebarDropdown: React.FC<SidebarDropdownProps> = (props) => {
         </div>
       </div>
       <ul
-        className={`${isOpen ? "h-auto opacity-100 duration-500" : "h-0 overflow-hidden opacity-0 duration-300"} sidebar-dropdown mx-auto w-4/5`}
+        className={`${isOpen ? "opacity-100" : "overflow-hidden opacity-0"} sidebar-dropdown mx-auto w-4/5 duration-300`}
+        ref={dropdownRef}
+        style={{ height: height }}
       >
         {props.children}
       </ul>

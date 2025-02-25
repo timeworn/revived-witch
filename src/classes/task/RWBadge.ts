@@ -16,7 +16,9 @@ export class RWBadge {
   }
 
   static getBadges() {
-    return Object.values(RWUtils.getAchieveBadgeConfigData()).map((badgeData) => new RWBadge(badgeData));
+    return Object.values(RWUtils.getAchieveBadgeConfigData()).map(
+      (badgeData) => new RWBadge(badgeData),
+    );
   }
 
   getName() {
@@ -34,8 +36,9 @@ export class RWBadge {
   getGroup() {
     return (
       RWTexts.getWordTask(
-        RWUtils.getAchieveBadgeGroupData().find((group) => group.badgeIDList.find((badgeId) => badgeId === this.id))
-          ?.nameTextID
+        RWUtils.getAchieveBadgeGroupData().find((group) =>
+          group.badgeIDList.find((badgeId) => badgeId === this.id),
+        )?.nameTextID,
       ) ?? "?"
     );
   }

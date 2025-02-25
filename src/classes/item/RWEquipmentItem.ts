@@ -20,7 +20,9 @@ export class RWEquipmentItem extends RWItem {
   }
 
   static getEquipments() {
-    return Object.values(RWUtils.getEquipItemData()).map((equipData) => new RWEquipmentItem(equipData));
+    return Object.values(RWUtils.getEquipItemData()).map(
+      (equipData) => new RWEquipmentItem(equipData),
+    );
   }
 
   getScore() {
@@ -31,7 +33,9 @@ export class RWEquipmentItem extends RWItem {
     const equipSuit = RWUtils.getEquipSuit(this.equipSuitId);
     return {
       id: this.equipSuitId,
-      name: equipSuit?.suitName ? RWTexts.getWordEquip(equipSuit.suitName) : "None",
+      name: equipSuit?.suitName
+        ? RWTexts.getWordEquip(equipSuit.suitName)
+        : "None",
     };
   }
 
@@ -39,7 +43,9 @@ export class RWEquipmentItem extends RWItem {
     const equipHandbook = RWUtils.getEquipHandbook(this.handbook);
 
     return this.abilityId.map((id, index) => {
-      const name = RWTexts.getWordRole(RWUtils.getAttrEffectIdName(id).classnameTextID);
+      const name = RWTexts.getWordRole(
+        RWUtils.getAttrEffectIdName(id).classnameTextID,
+      );
       const stat = equipHandbook.abilityValue[index];
       const baseStat = Math.ceil(stat * equipHandbook.initMagnify);
 
@@ -53,7 +59,10 @@ export class RWEquipmentItem extends RWItem {
   }
 
   toString() {
-    const attr = [`Rating: ${this.getScore()}`, `Set: ${this.getEquipSuit().name}`];
+    const attr = [
+      `Rating: ${this.getScore()}`,
+      `Set: ${this.getEquipSuit().name}`,
+    ];
 
     this.getAttributes().forEach((attribute) => {
       attr.push(`${attribute.name}: ${attribute.baseStat}`);

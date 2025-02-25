@@ -8,11 +8,11 @@ import {
   SetShowSkinParams,
   SKIN_TYPES,
 } from "../../../../../interfaces/CharacterInterfaces";
-import CharacterTop from "./utils/CharacterTop";
-import CharacterMarkdown from "./utils/CharacterMarkdown";
-import CharacterToc from "./utils/CharacterToc";
 import { getCubismUrl } from "../../../../../hooks/getImage";
 
+const CharacterTop = dynamic(() => import("./utils/CharacterTop"));
+const CharacterToc = dynamic(() => import("./utils/CharacterToc"));
+const CharacterMarkdown = dynamic(() => import("./utils/CharacterMarkdown"));
 const CharacterL2D = dynamic(() => import("./utils/CharacterL2D"), {
   ssr: false,
 });
@@ -75,7 +75,7 @@ const Character: React.FC<CharacterProps> = ({ id }) => {
   }, []);
 
   return (
-    <div className="page-pt">
+    <div className="navbar-margin">
       <div className="text-default-alt mx-auto mt-5 max-w-[60rem] px-4 lg:max-w-[85rem]">
         <div className="sm:px-6 md:px-8">
           <CharacterTop character={character} />

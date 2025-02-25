@@ -6,12 +6,12 @@
     @apply dark:hover:bg-slate-700 hover:bg-slate-300 text-base duration-300 font-semibold items-center rounded-md p-2 mt-1 flex;
 }
 
-.sidebar-dropdown {
-    @apply transform-gpu transition-all ease-in-out motion-reduce:transition-none grid gap-1 relative before:absolute before:inset-y-1 before:w-px before:bg-slate-300 before:content-[""] dark:before:bg-slate-700 ps-3 before:start-0 ms-4
+.sidebar-item-dropdown svg {
+    @apply transition-transform ease-in-out
 }
 
-.sidebar-dropdown svg {
-    @apply transform-gpu transition-all ease-in-out motion-reduce:transition-none
+.sidebar-dropdown {
+    @apply transition-all ease-in-out grid gap-1 relative before:absolute before:inset-y-1 before:w-px before:bg-slate-300 before:content-[""] dark:before:bg-slate-700 ps-3 before:start-0 ms-4
 }
 
 .sidebar .main ul>li.active>.sidebar-item-dropdown, .sidebar ul>li.active>a {

@@ -38,7 +38,7 @@ const Providers: React.FC<{ children: ReactNode }> = (props) => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 1024) {
+      if (window.innerWidth >= 960) {
         setSidebarVisible(true);
       } else {
         setSidebarVisible(false);

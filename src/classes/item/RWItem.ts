@@ -41,7 +41,10 @@ export class RWItem {
   }
 
   getType() {
-    return RWTexts.getWordItem(RWUtils.getItemClassToLoad(this.type).nameTextID) ?? "?";
+    return (
+      RWTexts.getWordItem(RWUtils.getItemClassToLoad(this.type).nameTextID) ??
+      "?"
+    );
   }
 
   toString() {

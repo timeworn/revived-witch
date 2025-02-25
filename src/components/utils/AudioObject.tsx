@@ -89,7 +89,7 @@ const AudioObject: React.FC<AudioObjectProps> = memo(
           audio.removeEventListener("ended", handleEnded);
         };
       }
-    }, [handleEnded]);
+    }, [handleEnded, audioRef.current]);
 
     return (
       <div className="round-gray flex flex-col gap-1 p-4">

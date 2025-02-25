@@ -25,7 +25,9 @@ export class RWFurnitureItem extends RWItem {
   }
 
   static getFurniture() {
-    return Object.values(RWUtils.getFurnitureItemData()).map((itemData) => new RWFurnitureItem(itemData));
+    return Object.values(RWUtils.getFurnitureItemData()).map(
+      (itemData) => new RWFurnitureItem(itemData),
+    );
   }
 
   getFurnitureType() {
@@ -38,7 +40,10 @@ export class RWFurnitureItem extends RWItem {
   }
 
   toString() {
-    return [`Size: ${this.attributes.cover}`, `Comfort: ${this.attributes.comfortPoint}`];
+    return [
+      `Size: ${this.attributes.cover}`,
+      `Comfort: ${this.attributes.comfortPoint}`,
+    ];
   }
 
   toJson() {

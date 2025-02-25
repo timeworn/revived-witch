@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+"use client";
+
+import { useState } from "react";
 import Badge from "./Badge";
 import SearchBar from "../../../../../../components/Base/Searchbar";
 import { RWBadge } from "../../../../../../classes/task/RWBadge";

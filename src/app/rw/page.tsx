@@ -24,7 +24,7 @@ const Page: React.FC = () => {
         alt="Background"
       />
       <div className="bg-grid absolute inset-0 z-0" />
-      <div className="page-pt relative">
+      <div className="navbar-margin relative">
         <div className="text-default z-10 mt-20 flex w-full flex-col gap-5 pb-4 text-center font-medium md:mt-10">
           <img
             className="m-auto w-4/5 md:w-2/5"
@@ -37,6 +37,7 @@ const Page: React.FC = () => {
               <Link
                 className="text-underlined not-light"
                 href={siteData.siteUrls.rw.routes.characters.url + "/1"}
+                prefetch={false}
               >
                 Witch
               </Link>

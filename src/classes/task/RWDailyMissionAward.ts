@@ -1,4 +1,7 @@
-import { ICDailyMissionAwardData, ItemAmount } from "../../interfaces/CharacterInterfaces";
+import {
+  ICDailyMissionAwardData,
+  ItemAmount,
+} from "../../interfaces/CharacterInterfaces";
 import { RWUtils } from "../utils/RWUtils";
 
 export class RWDailyMissionAward {
@@ -13,7 +16,9 @@ export class RWDailyMissionAward {
   }
 
   static getDailyMissionAwards() {
-    return Object.values(RWUtils.getDailyMissionAwardData()).map((awardData) => new RWDailyMissionAward(awardData));
+    return Object.values(RWUtils.getDailyMissionAwardData()).map(
+      (awardData) => new RWDailyMissionAward(awardData),
+    );
   }
 
   getReward() {

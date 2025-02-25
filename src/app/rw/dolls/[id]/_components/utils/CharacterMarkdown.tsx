@@ -2,7 +2,6 @@ import React, { memo } from "react";
 import CharacterDetail from "./CharacterDetail";
 import CharacterBackstory from "./CharacterBackstory";
 import CharacterSkill from "./CharacterSkill";
-import CharacterBond from "./CharacterBond";
 import CharacterEquipment from "./CharacterEquipment";
 import CharacterStats from "./CharacterStats";
 import CharacterSkin from "./CharacterSkin";
@@ -12,6 +11,12 @@ import CharacterYardSkill from "./CharacterYardSkill";
 import CharacterGift from "./CharacterGift";
 import { SKIN_TYPES } from "../../../../../../interfaces/CharacterInterfaces";
 import { RWCharacter } from "../../../../../../classes/character/RWCharacter";
+import {
+  Table,
+  TableItem,
+  TableRow,
+} from "../../../../../../components/utils/Table";
+import DescriptionElement from "./DescriptionElement";
 
 interface CharacterMarkdownProps {
   character: RWCharacter;
@@ -87,20 +92,15 @@ const CharacterMarkdown: React.FC<CharacterMarkdownProps> = memo(
         <hr />
         <div id="bond">
           <h2 className="text-title">Bond</h2>
-          <table className="w-full table-auto">
-            <thead>
-              <tr>
-                <th>Level</th>
-                <th>Reward</th>
-                <th>Exp</th>
-              </tr>
-            </thead>
-            <tbody>
-              {character.bonds.map((bond, index) => (
-                <CharacterBond key={index} bond={bond} />
-              ))}
-            </tbody>
-          </table>
+          <Table head={["Level", "Reward", "Exp"]}>
+            {character.bonds.map((bond, index) => (
+              <TableRow key={index}>
+                <TableItem value={bond.level} />
+                <TableItem value={DescriptionElement(bond.reward)} />
+                <TableItem value={bond.exp} />
+              </TableRow>
+            ))}
+          </Table>
         </div>
         <hr />
         <div>

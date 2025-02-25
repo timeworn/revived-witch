@@ -15,6 +15,8 @@ const ThemeSwitch: React.FC = () => {
 
   // useEffect only runs on the client, so now we can safely show the UI
   useEffect(() => {
+    const storedTheme = localStorage.getItem("theme") ?? "dark";
+    setTheme(storedTheme);
     setMounted(true);
   }, []);
 
