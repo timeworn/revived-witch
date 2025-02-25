@@ -23,9 +23,7 @@ dist-ssr
 *.sln
 *.sw?
 
-src/assets
 public/rw
-rw
 
 node_modules
 dist
