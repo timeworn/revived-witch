@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { Metadata } from "next";
 import siteData from "../../../../data/siteData";
 import Avatars from "./_components/Avatars";
@@ -8,12 +8,9 @@ export const metadata: Metadata = {
 };
 
 const Page: React.FC = () => (
-  <div className="page-primary">
-    <header className="page-header">
-      <h1>Avatars</h1>
-    </header>
+  <Suspense>
     <Avatars />
-  </div>
+  </Suspense>
 );
 
 export default Page;

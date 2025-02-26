@@ -5,6 +5,7 @@ import "./layout.css";
 import { ReactNode } from "react";
 import siteData from "../data/siteData";
 import Providers from "./_components/Providers";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteData.siteUrl),
@@ -48,6 +49,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <div className="min-h-screen">{children}</div>
           <Footer />
         </Providers>
+        <GoogleAnalytics gaId="G-3QFD4GB879" />
       </body>
     </html>
   );
