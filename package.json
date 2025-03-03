@@ -1,5 +1,5 @@
 {
-  "name": "revived-witch",
+  "name": "timeworn-wiki",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -8,9 +8,6 @@
     "build": "next build",
     "start": "next start",
     "postbuild": "next-sitemap",
-    "add-domain": "echo rw.timeworn.net > ./dist/CNAME",
-    "predeploy": "npm run build && npm run add-domain",
-    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@bprogress/next": "^3.0.0",
