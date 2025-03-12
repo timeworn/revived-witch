@@ -23,7 +23,7 @@ const Page: React.FC = () => {
           <GameItem
             name="Revived Witch"
             href={siteUrls.rw.url}
-            src={getImageUrl("home/revived-witch.jpg")}
+            src={getImageUrl("wiki/home/revived-witch.webp")}
           />
         </div>
       </section>
